@@ -14,9 +14,6 @@ struct DessertListView: View {
                 DessertDetailView(id: selectedDessert.mealID)
                     .background(Color.background)
             }
-            .refreshable {
-                viewModel.fetchDesserts()
-            }
             .searchable(text: $viewModel.searchText)
         }
     }
